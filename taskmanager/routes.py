@@ -5,3 +5,11 @@ from taskmanager.models import Catagory, Task
 @app.route("/")
 def home():
     return render_template("tasks.html")
+
+@app.route("/catagories")
+def catagories():
+    return render_template("catagories.html")
+
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    return render_template("add_catagory.html")
